@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Table from "./components/Table";
+import UserInfoComponent from "./components/UserInfoComponent";
+import SelectComponent from "./components/SelectComponent";
+import TableComponent from "./components/TableComponent";
 
 class App extends Component {
     constructor() {
         super();
         this.state = {
-            score: 0,
         };
     }
 
@@ -17,8 +18,9 @@ class App extends Component {
     render() {
         return (
             < div className="App">
-            asd
-        </div>
+                <UserInfoComponent/>
+                <SelectComponent/>
+                 <TableComponent /></div>
     );
     }
 }
