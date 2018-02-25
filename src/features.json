@@ -1,0 +1,20 @@
+[
+  {
+    "id": "001",
+    "description": "first trasker issue description",
+    "hours": 25,
+    "minutes": 10
+  },
+  {
+    "id": "002",
+    "description": "second trasker issue description",
+    "hours": 15,
+    "minutes": 24
+  },
+  {
+    "id": "003",
+    "description": "last trasker issue description",
+    "hours": 5,
+    "minutes": 18
+  }
+]
