@@ -4,23 +4,27 @@ import '../App.css';
 
 
 class DatePickerComponent extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            time: 0
+            time: props.dataTime
         };
         this.handleChange = this.handleChange.bind(this)
     }
+    componentDidMount() {
+        console.log(this.state.time)
+    }
     handleChange(){
-        this.setProps({
-            time: this.props.dataTime
+        this.setState({
+            time: this.state.time
         });
+        console.log(this.state.time)
     }
 
     render() {
         return (
             <div>
-                <input id="time" type="time" onChange={this.handleChange} value={this.props.dataTime}/>
+                <input id="time" type="time" onChange={this.handleChange} value={this.state.time}/>
             </div>
         );
     }
