@@ -9,14 +9,26 @@ import Moment from 'react-moment';
 class TableComponent extends Component {
     constructor() {
         super();
+        let times = [];
+        {myData.map((elem, i) => {
+             times.push(myData[i].time);
+
+        })}
         this.state = {
             data: myData,
-            total:0
+            total:0,
+            time:times
         };
+        this.handleChange = this.handleChange.bind(this)
     }
     componentDidMount() {
     }
-
+    handleChange(e){
+        console.log(this.state.time)
+        this.setState({
+            time: e.target.value
+        });
+    }
     render() {
         return (
             <div>
@@ -42,7 +54,7 @@ class TableComponent extends Component {
                             </td>
                             <td>{elem.description}</td>
                             <td>
-                            <DatePickerComponent dataTime={elem.time}/>
+                            <DatePickerComponent handleChange={this.handleChange} dataTime={elem.time}/>
                             </td>
                         </tr>
 
